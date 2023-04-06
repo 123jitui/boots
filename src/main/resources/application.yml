@@ -1,0 +1,42 @@
+spring:
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
+
+  datasource:
+        url: jdbc:mysql://192.168.31.139:3306/test?serverTimezone=UTC
+        username: root
+        password: 123
+        driver-class-name: com.mysql.cj.jdbc.Driver
+
+#    test1:
+#      jdbcUrl: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=UTC
+#      username: root
+#      password: 12345678
+#      driverClassName: com.mysql.cj.jdbc.Driver
+#    test2:
+#      jdbcUrl: jdbc:mysql://localhost:3306/testb?useSSL=false&serverTimezone=UTC
+#      username: root
+#      password: 12345678
+#      driverClassName: com.mysql.cj.jdbc.Driver
+
+#logging:
+#  level:
+#    com.duo.testa.daos: debug   #配置 显示sql语句指定位置到mapper方法
+
+#name: dev  #自定义参数 （自定义名 : 值） 就可以在其他类里使用 @Value("${自定义名}")赋值给变量等了
+
+mybatis:
+    mapper-locations: classpath:/shitilei/*.xml
+    type-aliases-package: com.mycs.dao
+
