@@ -18,12 +18,6 @@ spring:
         username: root
         password: 123
         driver-class-name: com.mysql.cj.jdbc.Driver
-        
-   server:
-   #端口号
-   port: 8888
-
-
 
 #    test1:
 #      jdbcUrl: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=UTC
@@ -41,6 +35,11 @@ spring:
 #    com.duo.testa.daos: debug   #配置 显示sql语句指定位置到mapper方法
 
 #name: dev  #自定义参数 （自定义名 : 值） 就可以在其他类里使用 @Value("${自定义名}")赋值给变量等了
+
+server:
+  #端口号
+  port: 8888
+
 
 mybatis:
     mapper-locations: classpath:/shitilei/*.xml
